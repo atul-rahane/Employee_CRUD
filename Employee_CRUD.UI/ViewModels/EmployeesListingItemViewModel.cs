@@ -10,6 +10,9 @@ namespace Employee_CRUD.UI.ViewModels
         public Employee Employee { get; private set; }
 
         public string Name => Employee?.Name;
+        public string Email => Employee?.Email;
+        public string Gender => Employee?.Gender;
+        public string Status => Employee?.Status;
 
         private bool _isDeleting;
         public bool IsDeleting
