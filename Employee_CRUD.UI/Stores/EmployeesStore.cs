@@ -73,5 +73,16 @@ namespace Employee_CRUD.UI.Stores
                 EmployeeDeleted?.Invoke(id);
             }
         }
+
+        public async Task Search(string searchText)
+        {
+            string uri= $"?name={searchText}";
+            IEnumerable<Employee> employees = await _client.GetAsync<IEnumerable<Employee>>(uri);
+
+            _employees.Clear();
+            _employees.AddRange(employees);
+
+            EmployeesLoaded?.Invoke();
+        }
     }
 }

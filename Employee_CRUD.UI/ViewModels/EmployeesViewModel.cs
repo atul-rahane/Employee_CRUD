@@ -42,6 +42,8 @@ namespace Employee_CRUD.UI.ViewModels
 
         public ICommand LoadEmployeesCommand { get; }
         public ICommand AddEmployeeCommand { get; }
+
+        public ICommand SearchEmployeesCommand { get; }
         public ICommand ExportToExcelCommand { get; }
 
         public EmployeesViewModel(EmployeesStore employeesStore, SelectedEmployeeStore selectedEmployeeStore, ModalNavigationStore modalNavigationStore)
@@ -51,6 +53,7 @@ namespace Employee_CRUD.UI.ViewModels
 
             LoadEmployeesCommand = new LoadEmployeesCommand(this, employeesStore);
             AddEmployeeCommand = new OpenAddEmployeeCommand(employeesStore, modalNavigationStore);
+            SearchEmployeesCommand = new SearchEmployeesCommand(this, employeesStore); 
             ExportToExcelCommand = new ExportToExcelCommand(employeesStore);
         }
 

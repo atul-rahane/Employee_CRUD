@@ -83,6 +83,8 @@
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="auto" />
                         <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="auto" />
                     </Grid.ColumnDefinitions>
 
                     <TextBlock
@@ -96,8 +98,17 @@
                         Content="Add"
                         FontSize="16" />
 
+                    <TextBox x:Name="txtSearchText" Margin="25  0 10 0" MaxHeight="25"
+                        Grid.Column="2" MinWidth="100" MaxLength="100"/>
+
                     <Button
-                        Grid.Column="2" Margin="10"
+                        Grid.Column="3"
+                        Command="{Binding SearchEmployeesCommand}" CommandParameter="{Binding ElementName=txtSearchText}"
+                        Content="Search By Name"
+                        FontSize="16" />
+
+                    <Button
+                        Grid.Column="4" Margin="10 10 0 10"
                         Command="{Binding ExportToExcelCommand}"
                         Content="Export"
                         FontSize="16" />
