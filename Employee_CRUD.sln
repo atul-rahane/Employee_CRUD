@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Employee_CRUD.UI", "Employe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Employee_CRUD.Domain", "Employee_CRUD.Domain\Employee_CRUD.Domain.csproj", "{F49F7D58-E917-4A0C-9A92-FAF79973B725}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Employee_CRUD.UI.Tests", "Employee_CRUD.UI.Tests\Employee_CRUD.UI.Tests.csproj", "{FA2B7E44-F402-4ACE-A34C-6266B61FF7C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Employee_CRUD.Domain.Tests", "Employee_CRUD.UI.Tests\Employee_CRUD.Domain.Tests.csproj", "{FA2B7E44-F402-4ACE-A34C-6266B61FF7C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
