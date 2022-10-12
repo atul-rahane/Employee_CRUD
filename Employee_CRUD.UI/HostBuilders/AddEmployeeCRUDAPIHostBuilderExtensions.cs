@@ -1,5 +1,5 @@
 ﻿using System;
-using Employee_CRUD.Domain;
+using Employee_CRUD.Domain.HttpClients;
 using Employee_CRUD.Domain.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,7 +15,7 @@ namespace Employee_CRUD.UI.HostBuilders
             {
                 string baseAddress = context.Configuration.GetValue<string>("BaseAddress");
                 string apiKey = context.Configuration.GetValue<string>("AuthKey");
-                services.AddSingleton(new EmployeeCRUDAPIKey(apiKey));
+                services.AddSingleton(new CRUDAPIKey(apiKey));
 
                 services.AddHttpClient<EmployeeCrudHttpClient>(c =>
                 {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Employee_CRUD.Domain;
+using Employee_CRUD.Domain.HttpClients;
 using Employee_CRUD.Domain.Models;
 
 namespace Employee_CRUD.UI.Stores

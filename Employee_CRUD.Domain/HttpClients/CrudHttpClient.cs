@@ -1,24 +1,21 @@
 ﻿using System.Net.Http.Headers;
-using System.Net.Http.Json;
 using Employee_CRUD.Domain.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace Employee_CRUD.Domain
+namespace Employee_CRUD.Domain.HttpClients
 {
-    public class EmployeeCrudHttpClient
+    public abstract class CrudHttpClient<T> : ICrudHttpClient<T>
+    where T : IKeyedObject
     {
-
         private readonly HttpClient _client;
-        private readonly string _apiKey;
 
-        public EmployeeCrudHttpClient(HttpClient client, EmployeeCRUDAPIKey apiKey)
+        public CrudHttpClient(HttpClient client, CRUDAPIKey apiKey)
         {
             _client = client;
-            _apiKey = apiKey.Key;
-
+            
             _client.DefaultRequestHeaders.Authorization =
-                new AuthenticationHeaderValue("Bearer", _apiKey);
+                new AuthenticationHeaderValue("Bearer", apiKey.Key);
         }
 
         public async Task<T?> GetAsync<T>(string uri)

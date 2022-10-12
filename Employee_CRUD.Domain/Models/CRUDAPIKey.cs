@@ -1,10 +1,10 @@
 ﻿namespace Employee_CRUD.Domain.Models
 {
-    public class EmployeeCRUDAPIKey
+    public class CRUDAPIKey
     {
         public string Key { get; }
 
-        public EmployeeCRUDAPIKey(string key)
+        public CRUDAPIKey(string key)
         {
             Key = key;
         }
