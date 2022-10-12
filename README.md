@@ -2,6 +2,7 @@
 Employee CRUD app in WPF
 
 Developer: Atul Rahane
+Email: atul.rahane@gmail.com
 
 NuGet Package dependecies:
 - Microsoft.Extensions.Hosting
