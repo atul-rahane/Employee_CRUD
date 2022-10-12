@@ -13,17 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Remove="Services\IMajorIndexService.cs" />
-    <Compile Remove="Services\MajorIndexService.cs" />
-    <Compile Remove="Services\StockPriceService.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>

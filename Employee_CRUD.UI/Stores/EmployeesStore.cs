@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Net.Http;
-using System.Threading;
 using System.Threading.Tasks;
 using Employee_CRUD.Domain;
 using Employee_CRUD.Domain.Models;
-using Newtonsoft.Json;
 
 namespace Employee_CRUD.UI.Stores
 {
